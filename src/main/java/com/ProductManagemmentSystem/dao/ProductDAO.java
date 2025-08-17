@@ -1,5 +1,7 @@
 package com.ProductManagemmentSystem.dao;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -16,5 +18,11 @@ public class ProductDAO {
 	public Product addProduct(Product p) {
 		return pjpa.save(p);
 	}
+	
+	public Optional<Product> find(int id) {
+		return pjpa.findById(id);
+	}
+
+
 
 }

@@ -1,6 +1,7 @@
 package com.ProductManagemmentSystem.service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,10 @@ public class ProductService {
 			
 	
 		return	new ResponseEntity<ResponseStructure<Product>>(rs,HttpStatus.ACCEPTED);
+	}
+	
+	public Optional<Product> find(int id) {
+		return pdao.find(id);
 	}
 	
 }

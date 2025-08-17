@@ -1,5 +1,7 @@
 package com.ProductManagemmentSystem.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +21,12 @@ public class ProductController {
 	public ResponseEntity<ResponseStructure<Product>> addProduct(Product p) {			
 		return	service.addProduct(p);
 	}
+	
+	@PostMapping("/find")
+	public Optional<Product> findProduct(int id) {			
+		return	service.find(id);
+	}
+	
 	
 	
 }
