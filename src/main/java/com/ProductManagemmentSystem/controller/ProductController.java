@@ -3,14 +3,18 @@ package com.ProductManagemmentSystem.controller;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ProductManagemmentSystem.entity.Product;
 import com.ProductManagemmentSystem.service.ProductService;
 import com.ProductManagemmentSystem.util.ResponseStructure;
 
+@RequestMapping("/Product")
 @RestController
 public class ProductController {
 
@@ -22,11 +26,20 @@ public class ProductController {
 		return	service.addProduct(p);
 	}
 	
-	@PostMapping("/find")
+	@GetMapping("/find")
 	public Optional<Product> findProduct(int id) {			
 		return	service.find(id);
 	}
+	@Value("${my.prop}")
+	public String key;
 	
+	@GetMapping("/a")
+	public String print() {		
+		
+		System.out.println(key);
+		return	"Hello";
+	}
+
 	
 	
 }
