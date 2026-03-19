@@ -1,5 +1,7 @@
 package com.ProductManagemmentSystem.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,6 +13,9 @@ public class Category {
 	@GeneratedValue
 	private	int id;
 	private String name;
+	
+	
+	private List<Product> product;
 	
 	public int getId() {
 		return id;
