@@ -10,5 +10,8 @@ public interface CategoryJPA extends JpaRepository<Category, Integer>{
 
 
 public Optional findById(Integer i);
+
+
+public Category update(Category c);
 	
 }

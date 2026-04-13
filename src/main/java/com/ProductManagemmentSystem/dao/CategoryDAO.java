@@ -23,6 +23,11 @@ public class CategoryDAO {
 		
 		return cjpa.findById(i);
 	}
+
+	public Category update(Category c) {
+		return cjpa.update(c);
+	}
+
 	
 
 }

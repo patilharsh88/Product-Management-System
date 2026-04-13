@@ -24,4 +24,10 @@ public class CategoryService {
 		return cdao.findById(i);
 	}
 
+	public Category update(Category c) {
+		return cdao.update(c);
+		
+	}
+
+
 }
