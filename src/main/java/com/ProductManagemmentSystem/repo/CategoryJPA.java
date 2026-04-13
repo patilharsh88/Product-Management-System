@@ -14,4 +14,5 @@ public Optional findById(Integer i);
 
 public Category update(Category c);
 	
+public Category save();
 }

@@ -25,7 +25,7 @@ public class CategoryDAO {
 	}
 
 	public Category update(Category c) {
-		return cjpa.update(c);
+		return cjpa.save(c);
 	}
 
 	
