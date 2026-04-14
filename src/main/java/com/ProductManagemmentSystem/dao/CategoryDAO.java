@@ -31,7 +31,7 @@ public class CategoryDAO {
 
 	public void deleteById(Integer integer) {
 		
-		cjpa.deleteById(integer);
+		 cjpa.deleteById(integer);
 	}
 
 	
