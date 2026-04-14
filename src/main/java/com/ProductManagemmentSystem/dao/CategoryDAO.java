@@ -3,6 +3,7 @@ package com.ProductManagemmentSystem.dao;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import com.ProductManagemmentSystem.entity.Category;
@@ -26,6 +27,11 @@ public class CategoryDAO {
 
 	public Category update(Category c) {
 		return cjpa.save(c);
+	}
+
+	public void deleteById(Integer integer) {
+		
+		cjpa.deleteById(integer);
 	}
 
 	
